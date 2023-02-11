@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/loginandregister.css">
+    <title>Login and Register</title>
+</head>
+<body>
+    <div class="bckgrnd">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="switchingBtn" onclick="login()">Login</button>
+                <button type="button" class="switchingBtn" onclick="register()">Register</button>
+            </div>
+            <!-- Login form  -->
+            <form id="login" class="input-group"action="_blank" method="POST">
+                <br><input class="input-field" id="user" type="text" name="username" placeholder="Username" required ><br><br>
+                <input class="input-field" id="pass" type="password" name="pass" placeholder="Password" required><br><br>
+                <input type="checkbox" class="checkbx"> <span>Remember me</span>
+                <button type="submit" class="subbtn" onclick="login1(); check();">Login</button> <br> <!--check-->
+                <p id="result">Welcome, login...</p>
+            </form>
+            <!-- Register form  -->
+            <form id="register" class="input-group" method="POST">
+                <br><input class="input-field" type="text" name="username" placeholder="Username" required id="username" ><br><br>
+                <br><input class="input-field" type="email" name="email" placeholder="Email" required id="email"><br><br>
+                <input class="input-field" type="password" name="pass" placeholder="Password" required id="password"><br><br>
+                <input type="checkbox" class="checkbx" required> <span>I agree to the terms and conditions</span>
+                <button type="submit" class="subbtn" onclick="register1()">Register</button> <br>
+                
+            </form>
+        </div>
+    </div>
+    <script>
+        var x = document.getElementById("login")
+        var y = document.getElementById("register")
+        var z = document.getElementById("btn")
+
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function register1(){
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var pass = document.getElementById('password').value;
+
+            var user = {
+                email: email,
+                username: username,
+                password: pass,
+            };
+            var json = JSON.stringify(user);
+            localStorage.setItem(username, json);
+            if(username.value == null && pass.value == null){
+                console.log(alert("Empty Fields!"));
+            }
+            else 
+                window.location.href="#";
+        }
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+        function login1 (){
+            event.preventDefault();
+            var username = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+            var result = document.getElementById('result');
+
+            var user = localStorage.getItem(username);
+            var date = JSON.parse(user);
+            console.log(date);
+            
+            if (user == null) {
+                result.innerHTML = 'wrong username';
+            }
+            else if (username == date.username && pass == date.password){
+                // result.innerHTML = 'logged in';
+                window.location.href="#";
+            }
+            else {
+                result.innerHTML = 'wrong password';
+            }
+        }
+
+        function check() {
+            var a = document['getElementById']('user')['value'];
+            var b = document['getElementById']('pass')['value'];
+            if (a == 'bosy' && b == 'admin123'){
+                alert('Welcome our Admin')
+            }
+            // if (a == 'admin' && b == 'admin') {
+            //     alert('Welcome Admin');
+            // }
+            // else {
+            //     alert('Hi ' + a);
+            // }
+        } 
+    </script>
+</body>
+</html>
