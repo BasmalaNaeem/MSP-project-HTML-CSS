@@ -1,20 +1,116 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     /* align-items: center; */
 }
+
 :root {
-    --mainColor: #463f3a ;
+    --mainColor: #463f3a;
     --boxandbtnColor: #8a817c;
+    --darkBrown: #1a1423;
+    --brownColor: #463f3a;
+    --brownishColor: #8a817c;
+    --beigeColor: #bcb8b1;
+    --dustyColor: #f4f3ee;
+    --nudeColor: #e0afa0;
 }
+
 body {
-    /* remove white space around body */
-    height: 100vh; 
+    background-image: url(images/background.jpg);
+    background-size: cover;
+}
+.main{
+    padding-top:70px;
+}
+
+
+/*navbar*/
+:root {
+    --darkBrown: #1a1423;
+    --brownColor: #463f3a;
+    --brownishColor: #8a817c;
+    --beigeColor: #bcb8b1;
+    --dustyColor: #f4f3ee;
+    --nudeColor: #e0afa0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
     display: flex;
     align-items: center;
-    justify-content: center; 
-    
+    justify-content: space-between;
+    padding: 0 70px;
+    background-color: var(--brownishColor);
+    box-shadow: 2px 2px 20px var(--beigeColor);
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
 }
+
+nav h2 {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 18px;
+    margin-left: 0;
+    color: var(--darkBrown);
+}
+
+nav ul {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li a {
+    height: 50px;
+    line-height: 43px;
+    margin: 8px;
+    padding: 0px 12px;
+    display: flex;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--darkBrown);
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    border-radius: 8px;
+    background-color: var(--dustyColor);
+    color: var(--darkBrown);
+    box-shadow: 2px 2px 2px var(--beigeColor);
+}
+
+.sub-menu-1 {
+    display: none;
+    z-index: 1000;
+}
+
+nav ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    margin-top: -5px;
+    background-color: var(--nudeColor);
+    margin-left: -10px;
+    border-radius: 8px;
+}
+
+nav ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+/*endnav*/
 
 
 .bckgrnd{
@@ -89,7 +185,7 @@ body {
 .checkbx{
     margin: 0 5px 30px ;
     cursor: pointer;
-    accent-color: #8a817c;
+    accent-color:var(--dustyColor);
 }
 span{
     color: #888;
