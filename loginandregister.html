@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="loginandregister.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
     <title>Login and Register</title>
 </head>
 <body>
      <nav>
         <h2>l'armoire</h2>
+        <div class="nav-links">
         <ul class="menu">
             <li>  <a href="index.html" class="active "> Home</a> </li>
             <li>
                 <a href="#" class="active "> Clothing</a>
                 <div class="sub-menu-1">
                     <ul>
-                        <li><a href="Men.html"> Men Clothes</a> </li>
+                        <li><a href="man.html"> Men Clothes</a> </li>
                         <li> <a href="Women.html"> Women Clothes</a> </li>
                         <li><a href="Children.html"> Children Clothes</a> </li>
                     </ul>
@@ -38,7 +44,12 @@
                 </div>
             </li>
         </ul>
+        </div>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
     </nav>
+
     <div class="main">
         <div class="bckgrnd">
             <div class="form-box">
@@ -124,6 +135,14 @@
                 // result.innerHTML = 'wrong password';
             }
         }
+        
+          //menu-button
+        var menuIcon = document.querySelector(".menu-icon");
+        var navLinks = document.querySelector(".nav-links");
+
+        menuIcon.addEventListener('click', function () {
+            navLinks.classList.toggle('d-flex');
+        })
         
     </script>
 </body>
