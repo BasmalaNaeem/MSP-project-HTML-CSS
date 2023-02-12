@@ -1,0 +1,62 @@
+:root{
+    --marginleft:20px;
+}
+body{
+    background-color: #bcb8b1;
+    font-family: 'Kanit', sans-serif;
+}
+h2{
+    margin-left: var(--marginleft);
+    color: #444A4D;
+}
+.parent{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-areas: "paymentdetails yourcart";
+border-radius: 10px;
+padding: 100px;
+}
+.paymentdetails{
+    background-color:#FFFFFF;
+grid-area: paymentdetails; 
+border-radius: 10px 0 0 10px;
+}
+label{
+    margin-left: var(--marginleft);
+}
+.yourcart{
+    grid-area: yourcart;
+    background-color:#F8FAFB;
+    border-radius: 0 10px 10px 0;
+}
+#cvc{
+    margin-left: 70px;
+}
+input{
+    border: none;
+    border-bottom: #E3E6E9;
+    border: 5px;
+    margin-left: var(--marginleft );
+    margin-bottom: 20px;
+    padding: 10px;
+}
+button{
+    color:white;
+    border-radius: 20px;
+    background-color: #4bb71b;
+    padding: 10px;
+    border:none;
+margin-left: 150px;
+margin-bottom: 30px;
+    
+}
+input:hover{
+    cursor:auto;
+    background-color: #E3E6E9;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #444A4D;
+    color: white;
+    cursor: pointer;
+}
