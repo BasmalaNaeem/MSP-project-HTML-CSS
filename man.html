@@ -10,16 +10,52 @@
      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- for icons -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel="stylesheet">
-    <title>man section</title>
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    
+    <title>Men section</title>
 </head>
 <body>
-    <header>
-        <div class="nav container">
-            <a href="#" class="logo"> l'armoire </a>
-            <i class='bx bx-cart' id="cart-icon"></i>
-         
+    <nav>
+        <h2>l'armoire</h2>
+        <div class="nav-links">
+            <ul class="menu">
+                <li>  <a href="index.html" class="active "> Home</a> </li>
+                <li>
+                    <a href="#" class="active "> Clothing</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="man.html"> Men Clothes</a> </li>
+                            <li> <a href="Women.html"> Women Clothes</a> </li>
+                            <li><a href="Children.html"> Children Clothes</a> </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="Payment.html"> payment</a> </li>
+                <li><a href="About-Us.html"> about us </a> </li>
+                <li>
+                    <a href="#" class="active ">Account</a>
+                    <div class="sub-menu-1">
+                        <ul>
+                            <li><a href="loginandregister.html"> Log in </a> </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="index.html"> Log Out </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </header>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
       <!--shop-->
       <section id="Pants" class="shop container">
         <h2 class="section-title"> Trousers </h2>
@@ -203,6 +239,15 @@
                 </div>
             </div>
     </section>
+    
+    <script>
+        var menuIcon = document.querySelector(".menu-icon");
+        var navLinks = document.querySelector(".nav-links");
+
+        menuIcon.addEventListener('click', function () {
+            navLinks.classList.toggle('d-flex');
+        })
+    </script>
 
 </body>
 </html>
