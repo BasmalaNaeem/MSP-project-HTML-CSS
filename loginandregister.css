@@ -89,6 +89,7 @@ body {
 .checkbx{
     margin: 0 5px 30px ;
     cursor: pointer;
+    accent-color: #8a817c;
 }
 span{
     color: #888;
