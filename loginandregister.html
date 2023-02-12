@@ -35,9 +35,9 @@
         </div>
     </div>
     <script>
-        var x = document.getElementById("login")
-        var y = document.getElementById("register")
-        var z = document.getElementById("btn")
+        let x = document.getElementById("login")
+        let y = document.getElementById("register")
+        let z = document.getElementById("btn")
 
         function register(){
             x.style.left = "-400px";
@@ -46,18 +46,18 @@
         }
         function register1(){
             event.preventDefault();
-            var username = document.getElementById('username').value;
-            var email = document.getElementById('email').value;
-            var pass = document.getElementById('password').value;
+            let username = document.getElementById('username').value;
+            let email = document.getElementById('email').value;
+            let pass = document.getElementById('password').value;
 
-            var user = {
+            let user = {
                 email: email,
                 username: username,
                 password: pass,
             };
-            var json = JSON.stringify(user);
+            let json = JSON.stringify(user);
             localStorage.setItem(username, json);
-            if(username.value == null && pass.value == null){
+            if(username.value == "" && pass.value == ""){
                 console.log(alert("Empty Fields!"));
             }
             else 
@@ -72,37 +72,26 @@
             event.preventDefault();
             var username = document.getElementById('user').value;
             var pass = document.getElementById('pass').value;
-            var result = document.getElementById('result');
+            // var result = document.getElementById('result');
 
             var user = localStorage.getItem(username);
             var date = JSON.parse(user);
-            console.log(date);
-            
+            console.log(localStorage.getItem(username));
             if (user == null) {
-                result.innerHTML = 'wrong username';
+                alert('wrong username');
+                // result.innerHTML = 'wrong username';
             }
             else if (username == date.username && pass == date.password){
+                
                 // result.innerHTML = 'logged in';
                 window.location.href="#";
             }
             else {
-                result.innerHTML = 'wrong password';
+                alert('wrong password');
+                // result.innerHTML = 'wrong password';
             }
         }
-
-        function check() {
-            var a = document['getElementById']('user')['value'];
-            var b = document['getElementById']('pass')['value'];
-            if (a == 'bosy' && b == 'admin123'){
-                alert('Welcome our Admin')
-            }
-            // if (a == 'admin' && b == 'admin') {
-            //     alert('Welcome Admin');
-            // }
-            // else {
-            //     alert('Hi ' + a);
-            // }
-        } 
+        
     </script>
 </body>
 </html>
