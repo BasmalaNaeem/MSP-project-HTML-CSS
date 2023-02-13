@@ -181,7 +181,7 @@ a {
     grid-area: f;
     margin-left: 30px;
     text-decoration: none;
-    color: blue;
+    color: var(--darkBrown);
 }
 
 .ordersummary {
@@ -230,6 +230,7 @@ button {
     border: none;
     width: 110px;
     margin-left: 50px;
+    border-radius:8px;
 }
 
 .tot {
@@ -255,7 +256,7 @@ p.do {
 #ch {
     background-color: var(--nudeColor);
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     width: 300px;
 }
 
