@@ -150,6 +150,7 @@ nav ul li:hover .sub-menu-1 ul {
 .switchingBtn {
     padding: 10px 30px ;
     position: relative;
+    /*when hovering curser is in the shape of a pointer*/
     cursor: pointer;
     background: transparent;
     border: none;
@@ -182,6 +183,7 @@ nav ul li:hover .sub-menu-1 ul {
     border-top: 0;
     border-right: 0;
     border-bottom: 1px solid gray;
+    /*to take its background color*/
     background-color: transparent;
 }
 .input-field:hover {
@@ -213,7 +215,6 @@ span{
     border-radius: 30px;
     transition: 0.7s ease;
     animation-duration: 2s;
-    /* animation-iteration-count: infinite; */
 }
 .subbtn:hover {
     background-color: #8a817c;
@@ -223,7 +224,6 @@ p{
     text-align: center;
     font-size: 20px;
     font-style: italic;
-    /* font-weight: bold; */
 }
 #login{
     left: 50px;
