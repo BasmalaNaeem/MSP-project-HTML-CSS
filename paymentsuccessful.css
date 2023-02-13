@@ -1,11 +1,22 @@
-body{
-    background-color:#bcb8b1;
+:root {
+    --darkBrown: #1a1423;
+    --brownColor: #463f3a;
+    --brownishColor: #8a817c;
+    --beigeColor: #bcb8b1;
+    --dustyColor: #f4f3ee;
+    --nudeColor: #e0afa0;
+}
+
+body {
+    background-image: url(images/background.jpg);
+    background-size: cover;
     font-family: 'Roboto', sans-serif;
 }
-.container{
+
+.container {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 80px;
 }
 .checkmark {
     width: 100px;
