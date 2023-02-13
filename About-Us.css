@@ -2,6 +2,7 @@
   text-align: center;
   box-sizing: border-box;
 }
+/*constant values */
 :root{
     --mainfontstyle: inter;
     --darkBrown: #1a1423;
@@ -112,15 +113,15 @@ nav ul li:hover .sub-menu-1 {
 .wrapper{
     padding:50px;
 }
+
+/*end navbar*/
+
 .head{
     color:var(--darkBrown);
     font-size:30px;
     padding:17px;
     padding-bottom:0;
 }
-
-/*end navbar*/
-
 
 h1{
     color: var(--maincolor);
@@ -135,6 +136,7 @@ h1{
     align-items: center;
     height: 80vh;
 }   
+/* each member */
   .pic {
     width: 20%;
     height: 50%;
@@ -146,10 +148,10 @@ h1{
     border: 6px var(--maincolor) ;
     border-style:double;
     transition: transform 1s 1s;
-
 }
     img { 
     width: 100%;  
+    transition: transform 1s 1s;
   }
   .info {
     padding: 20px;
@@ -192,16 +194,11 @@ h1{
     transition: top 1s 2.75s;
 
 }
-
+/*  Animation */
   .pic:hover .info {
     opacity: 1;
     transform: rotate(360deg);
   }
-  
-  img {
-    transition: transform 1s 1s;
-  }
-  
   .pic:hover img {
     transform: scale(1.1, 1.1);
 }
@@ -218,6 +215,7 @@ h1{
   .pic:hover .info a {
     top: 0;
   }
+/* for tablet */
   @media screen and (max-width:1000px )and (min-width:621px){
     .pic{
       margin: 20px;
@@ -225,7 +223,8 @@ h1{
       height: 45vh;
     }
   }
-  @media screen and (max-width:630px ) {
+/* for phone*/
+  @media screen and (max-width:620px ) {
     .pic{
       margin: 30px 65px ;
       width: 80%;
