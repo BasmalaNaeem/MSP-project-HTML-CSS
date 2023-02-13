@@ -185,7 +185,7 @@ a {
 }
 
 .ordersummary {
-    background-color: #F6F6F6;
+    background-color: var(--dustyColor);
     border-radius: 0 5px 5px 0;
     width: 50vh;
 }
@@ -200,13 +200,13 @@ a {
 
 .its {
     grid-area: its;
-    color: black;
+    color: var(--darkBrown);
     margin-left: var(--marginleft);
 }
 
 .ct {
     grid-area: ct;
-    color: black;
+    color: var(--darkBrown);
     direction: rtl;
     padding-right: 15px;
 }
@@ -224,7 +224,7 @@ input {
 
 button {
     text-align: center;
-    background-color: #F97574;
+    background-color: var(--nudeColor);
     color: white;
     padding: 10px;
     border: none;
@@ -253,7 +253,7 @@ p.do {
 }
 
 #ch {
-    background-color: #5C51DB;
+    background-color: var(--nudeColor);
     color: white;
     border-radius: 5px;
     width: 300px;
