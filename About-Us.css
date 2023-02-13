@@ -248,5 +248,7 @@ main {
         width:100%;
         text-align:center;
     }
- 
+     .d-flex{
+      display:flex;
+  }
   }
