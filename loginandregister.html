@@ -116,23 +116,19 @@
             event.preventDefault();
             var username = document.getElementById('user').value;
             var pass = document.getElementById('pass').value;
-            // var result = document.getElementById('result');
 
             var user = localStorage.getItem(username);
             var date = JSON.parse(user);
             console.log(localStorage.getItem(username));
             if (user == null) {
                 alert('wrong username');
-                // result.innerHTML = 'wrong username';
             }
             else if (username == date.username && pass == date.password){
                 
-                // result.innerHTML = 'logged in';
                 window.location.href="#";
             }
             else {
                 alert('wrong password');
-                // result.innerHTML = 'wrong password';
             }
         }
         
