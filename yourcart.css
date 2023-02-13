@@ -288,4 +288,37 @@ button:hover {
     .d-flex{
         display:flex;
     }
+     body{
+        display: block;
+    }
+    .container{
+        display: block;
+    }
+    .shoppingcart{
+       width: 100vw;
+    }
+    .ordersummary{
+        padding-left: 15px;
+        width: 100vw;
+    }
+    h2{
+        margin-left: 30px;
+        width: 150px;
+    }
+    p{
+        color: #C3C3C3;
+        margin-bottom: 200px;
+    }
+    .pd{
+        width: 20vh;
+    }
+    .p , .q{
+    width: 15vh;
+    }
+    .ordersummary h2{
+        width: 170px;
+    }
+    #ch{
+        margin-left: 32%;
+    }
 }
